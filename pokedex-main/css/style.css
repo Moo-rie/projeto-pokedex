@@ -8,6 +8,7 @@
 }
 
 body {
+    justify-content: center;
     text-align: center;
     background: linear-gradient(to bottom, #6ab7f5, #fff);
     min-height: 100vh;
@@ -92,17 +93,72 @@ main {
 
 }
 
-.shiny {
-    width: 50%;
-    padding: 4%;
-    border: 2px solid #000;
-    border-radius: 40px;
-    box-shadow: -2px 3px 0 
-    #222, -4px 6px 0 #000;
-    
-}
-
 .button:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
 }
+
+
+/*CONFIGURAÇÃO SWITCH*/
+
+:root{
+    --colorBack: #040305;
+    --colorPurple: #9800ce;
+    --colorGrey: rgb(87,87,87);
+}
+
+.switch {
+    left: 40%;
+    bottom: 135%;
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+  .slider.round:before {
+    border-radius: 50%;
+}
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #444;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+  input:checked + .slider {
+    background-color: var(--colorPurple);}
+  
+  input:focus + .slider {
+    color: fff;
+}
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    box-shadow: 0 0 12px var(--colorPurple), 0 0 50px var(--colorPurple), 0 0 100px var(--colorPurple);
+}
+
